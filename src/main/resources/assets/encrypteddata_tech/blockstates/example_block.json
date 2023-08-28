@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "encrypteddata_tech:block/example_block"
+    }
+  }
+}

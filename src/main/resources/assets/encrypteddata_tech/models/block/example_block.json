@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "encrypteddata_tech:block/example_block"
+  }
+}
