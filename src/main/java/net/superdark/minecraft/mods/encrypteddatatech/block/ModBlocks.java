@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.superdark.minecraft.mods.encrypteddatatech.EncryptedDataTechMod;
+import net.superdark.minecraft.mods.encrypteddatatech.item.ModCreativeModeTab;
 import net.superdark.minecraft.mods.encrypteddatatech.item.ModItems;
 
 import java.util.function.Supplier;
@@ -23,7 +24,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, EncryptedDataTechMod.MODID);
 
     public static final RegistryObject<Block> EXAMPLE_BLOCK = registerBlock("example_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeModeTab.Tab);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
