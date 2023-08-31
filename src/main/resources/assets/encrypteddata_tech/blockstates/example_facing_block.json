@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "encrypteddata_tech:block/example_facing_block" },
+    "facing=east": { "model": "encrypteddata_tech:block/example_facing_block", "y": 90 },
+    "facing=south": { "model": "encrypteddata_tech:block/example_facing_block", "y": 180 },
+    "facing=west": { "model": "encrypteddata_tech:block/example_facing_block", "y": 270 }
+  }
+}
