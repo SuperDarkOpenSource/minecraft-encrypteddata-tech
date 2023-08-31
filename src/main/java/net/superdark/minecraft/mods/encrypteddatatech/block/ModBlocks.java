@@ -12,10 +12,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.superdark.minecraft.mods.encrypteddatatech.EncryptedDataTechMod;
+import net.superdark.minecraft.mods.encrypteddatatech.block.entity.ExampleFacingBlockEntity;
 import net.superdark.minecraft.mods.encrypteddatatech.item.ModCreativeModeTab;
 import net.superdark.minecraft.mods.encrypteddatatech.item.ModItems;
 
 import java.util.function.Supplier;
+
+import static net.superdark.minecraft.mods.encrypteddatatech.block.entity.ModBlockEntities.EXAMPLE_FACING_BLOCK_ENTITY;
 
 /**
  * Based on tutorial by Kaupenjoe
@@ -28,7 +31,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeModeTab.Tab);
 
      public static final RegistryObject<Block> EXAMPLE_FACING_BLOCK = registerBlock("example_facing_block",
-            () -> new ExampleFacingBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new HorizontalOrientableBlock<>(BlockBehaviour.Properties.copy(Blocks.ANVIL),
+                                                  EXAMPLE_FACING_BLOCK_ENTITY),
+                                                  CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {

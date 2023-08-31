@@ -6,25 +6,28 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.superdark.minecraft.mods.encrypteddatatech.block.entity.ModBlockEntities;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class ExampleFacingBlock extends HorizontalDirectionalBlock implements EntityBlock
+public class  HorizontalOrientableBlock <T extends BlockEntity> extends HorizontalDirectionalBlock implements EntityBlock
 {
+    private final RegistryObject<BlockEntityType<T>> _blockEntityType;
 
-    public ExampleFacingBlock(Properties p)
+    public HorizontalOrientableBlock(Properties p, RegistryObject<BlockEntityType<T>> blockEntityType)
     {
         super(p);
+        _blockEntityType = blockEntityType;
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state)
     {
-        return ModBlockEntities.EXAMPLE_FACING_BLOCK_ENTITY.get().create(pos, state);
+        return _blockEntityType.get().create(pos, state);
     }
 
     @Override
