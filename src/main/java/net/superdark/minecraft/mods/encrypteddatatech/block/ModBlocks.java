@@ -33,7 +33,7 @@ public class ModBlocks {
      public static final RegistryObject<Block> EXAMPLE_FACING_BLOCK = registerBlock("example_facing_block",
             () -> new HorizontalOrientableBlock<>(BlockBehaviour.Properties.copy(Blocks.ANVIL),
                                                   EXAMPLE_FACING_BLOCK_ENTITY),
-                                                  CreativeModeTab.TAB_BUILDING_BLOCKS);
+                                                  ModCreativeModeTab.Tab);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
