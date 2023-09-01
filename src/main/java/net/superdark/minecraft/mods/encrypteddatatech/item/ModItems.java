@@ -21,7 +21,7 @@ public class ModItems
 
     public static final RegistryObject<Item> CrudeOilBucket = ITEMS.register("crude_oil_bucket",
             () -> new BucketItem(ModFluids.CrudeOilSource,
-                    new Item.Properties().tab(CreativeModeTab.TAB_MISC).craftRemainder(Items.BUCKET).stacksTo(1)));
+                    new Item.Properties().tab(ModCreativeModeTab.Tab).craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static void register(IEventBus eventBus)
     {
