@@ -5,6 +5,8 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.superdark.minecraft.mods.encrypteddatatech.EncryptedDataTechMod;
+import net.superdark.minecraft.mods.encrypteddatatech.fluid.ModFluids;
 import net.superdark.minecraft.mods.encrypteddatatech.block.entity.ExampleFacingBlockEntity;
 import net.superdark.minecraft.mods.encrypteddatatech.item.ModCreativeModeTab;
 import net.superdark.minecraft.mods.encrypteddatatech.item.ModItems;
@@ -34,6 +37,9 @@ public class ModBlocks {
             () -> new HorizontalOrientableBlock<>(BlockBehaviour.Properties.copy(Blocks.ANVIL),
                                                   EXAMPLE_FACING_BLOCK_ENTITY),
                                                   ModCreativeModeTab.Tab);
+
+    public static final RegistryObject<LiquidBlock> CrudeOil = BLOCKS.register("crude_oil_block",
+            () -> new LiquidBlock(ModFluids.CrudeOilSource, BlockBehaviour.Properties.copy(Blocks.LAVA)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
