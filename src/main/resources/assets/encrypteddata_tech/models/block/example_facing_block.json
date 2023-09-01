@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "north": "encrypteddata_tech:block/example_facing_front",
+    "south": "encrypteddata_tech:block/example_facing_back",
+    "west": "encrypteddata_tech:block/example_facing_right",
+    "east": "encrypteddata_tech:block/example_facing_left",
+    "top": "encrypteddata_tech:block/example_facing_top",
+    "bottom": "encrypteddata_tech:block/example_facing_bottom"
+  }
+}
