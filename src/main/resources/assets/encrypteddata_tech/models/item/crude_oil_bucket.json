@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "encrypteddata_tech:item/crude_oil_bucket"
+  }
+}

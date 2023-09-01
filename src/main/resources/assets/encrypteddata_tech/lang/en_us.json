@@ -2,6 +2,8 @@
   "language.name": "English",
   "language.region": "United States",
   "language.code": "en_us",
+  "itemGroup.encrypteddata_tech":  "EncryptedData's Tech Mod",
   "block.encrypteddata_tech.example_facing_block": "Example Facing Block",
-  "block.encrypteddata_tech.example_block": "Example Block"
+  "block.encrypteddata_tech.example_block": "Example Block",
+  "item.encrypteddata_tech.crude_oil_bucket": "Crude Oil Bucket"
 }
